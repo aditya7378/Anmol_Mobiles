@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 from os import path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,11 +83,12 @@ WSGI_APPLICATION = 'Anmol_Mobiles.wsgi.application'
 
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Anmol_Mobile',
-        'USER': 'postgres',
-        'PASSWORD':'1234',
-        'HOST':'localhost'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd49tuda3gj713o',
+        'USER': 'qlxqdfrnzsmiyk',
+        'PASSWORD':'a6384a35fd1dd67703380f8d4bbfef5d49143bf039981e931fade78a0b3f9c7f',
+        'HOST':'ec2-34-203-114-67.compute-1.amazonaws.com',
+        'PORT':'5432', 
     }
 }
 
@@ -129,6 +131,8 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
 
