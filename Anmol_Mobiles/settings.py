@@ -26,7 +26,7 @@ SECRET_KEY = 'i@ivbbkau$i1%1v!(@)3wns51#9+da%j#=2*@&jwqt0^=t_e#w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','rigelspices.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','anmolmobiles.herokuapp.com']
 
 
 # Application definition
